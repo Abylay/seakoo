@@ -16,16 +16,19 @@ class ShopController extends Controller
     public function index()
     {
         $pagination = 9;
-        $categories = Category::all();
+        $category = Category::get();
+        $categories = Category::whereNull('parent_id')->get();
+       
+       
 
         if (request()->category) {
             $products = Product::with('categories')->whereHas('categories', function ($query) {
                 $query->where('slug', request()->category);
             });
-            $categoryName = optional($categories->where('slug', request()->category)->first())->name;
+            //$categoryName = optional($categories->where('slug', request()->category)->first())->name;
         } else {
             $products = Product::where('featured', true);
-            $categoryName = 'Featured';
+            //$categoryName = 'Featured';
         }
 
         if (request()->sort == 'low_high') {
@@ -39,7 +42,7 @@ class ShopController extends Controller
         return view('shop')->with([
             'products' => $products,
             'categories' => $categories,
-            'categoryName' => $categoryName,
+            'category' => $category,
         ]);
     }
 
