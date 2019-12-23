@@ -36,13 +36,13 @@
         <div class="sidebar">
 
             <ul>
-              <li class="active"><a href="{{ route('users.edit') }}">My Profile</a></li>
-              <li><a href="{{ route('orders.index') }}">My Orders</a></li>
+              <li class="active"><a href="{{ route('users.edit') }}">Мой профиль</a></li>
+              <li><a href="{{ route('orders.index') }}">Мои заказы</a></li>
             </ul>
         </div> <!-- end sidebar -->
         <div class="my-profile">
             <div class="products-header">
-                <h1 class="stylish-heading">My Profile</h1>
+                <h1 class="stylish-heading">Мой профиль</h1>
             </div>
 
             <div>
@@ -57,7 +57,7 @@
                     </div>
                     <div class="form-control">
                         <input id="password" type="password" name="password" placeholder="Password">
-                        <div>Leave password blank to keep current password</div>
+                        <div>Оставьте пароль пустым, чтобы сохранить текущий пароль!</div>
                     </div>
                     <div class="form-control">
                         <input id="password-confirm" type="password" name="password_confirmation" placeholder="Confirm Password">

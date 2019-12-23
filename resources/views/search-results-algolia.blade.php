@@ -11,9 +11,9 @@
 @section('content')
 
     @component('components.breadcrumbs')
-        <a href="/">Home</a>
+        <a href="/">Главная страница</a>
         <i class="fa fa-chevron-right breadcrumb-separator"></i>
-        <span>Search</span>
+        <span>Поиск</span>
     @endcomponent
 
     <div class="container">
