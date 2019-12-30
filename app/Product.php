@@ -6,10 +6,11 @@ use Laravel\Scout\Searchable;
 use Illuminate\Database\Eloquent\Model;
 use App\Currency;
 use Nicolaslopezj\Searchable\SearchableTrait;
+use Laravelista\Comments\Commentable;
 
 class Product extends Model
 {
-    use SearchableTrait, Searchable;
+    use SearchableTrait, Searchable, Commentable;
 
     protected $fillable = ['quantity'];
 

@@ -80,6 +80,7 @@ class ComposerStaticInit14bb5a53c188dfb30b5878dc33ecfe26
             'Symfony\\Component\\Debug\\' => 24,
             'Symfony\\Component\\CssSelector\\' => 30,
             'Symfony\\Component\\Console\\' => 26,
+            'Spatie\\Honeypot\\' => 16,
             'Seld\\PharUtils\\' => 15,
             'Seld\\JsonLint\\' => 14,
         ),
@@ -113,6 +114,7 @@ class ComposerStaticInit14bb5a53c188dfb30b5878dc33ecfe26
         'L' => 
         array (
             'League\\Flysystem\\' => 17,
+            'Laravelista\\Comments\\' => 21,
             'Laravel\\Tinker\\' => 15,
             'Laravel\\Scout\\' => 14,
             'Laravel\\Dusk\\' => 13,
@@ -170,6 +172,7 @@ class ComposerStaticInit14bb5a53c188dfb30b5878dc33ecfe26
             'Composer\\Semver\\' => 16,
             'Composer\\CaBundle\\' => 18,
             'Composer\\' => 9,
+            'Codebyray\\ReviewRateable\\' => 25,
             'Cartalyst\\Stripe\\Laravel\\' => 25,
             'Cartalyst\\Stripe\\' => 17,
             'Cartalyst\\Collections\\' => 22,
@@ -310,6 +313,10 @@ class ComposerStaticInit14bb5a53c188dfb30b5878dc33ecfe26
         array (
             0 => __DIR__ . '/..' . '/symfony/console',
         ),
+        'Spatie\\Honeypot\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/spatie/laravel-honeypot/src',
+        ),
         'Seld\\PharUtils\\' => 
         array (
             0 => __DIR__ . '/..' . '/seld/phar-utils/src',
@@ -369,6 +376,10 @@ class ComposerStaticInit14bb5a53c188dfb30b5878dc33ecfe26
         'League\\Flysystem\\' => 
         array (
             0 => __DIR__ . '/..' . '/league/flysystem/src',
+        ),
+        'Laravelista\\Comments\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laravelista/comments/src',
         ),
         'Laravel\\Tinker\\' => 
         array (
@@ -513,6 +524,10 @@ class ComposerStaticInit14bb5a53c188dfb30b5878dc33ecfe26
         'Composer\\' => 
         array (
             0 => __DIR__ . '/..' . '/composer/composer/src/Composer',
+        ),
+        'Codebyray\\ReviewRateable\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/codebyray/laravel-review-rateable/src',
         ),
         'Cartalyst\\Stripe\\Laravel\\' => 
         array (
@@ -1009,6 +1024,10 @@ class ComposerStaticInit14bb5a53c188dfb30b5878dc33ecfe26
         'Cartalyst\\Stripe\\Utility' => __DIR__ . '/..' . '/cartalyst/stripe/src/Utility.php',
         'CategoriesTableSeeder' => __DIR__ . '/../..' . '/database/seeds/CategoriesTableSeeder.php',
         'CategoryTableSeeder' => __DIR__ . '/../..' . '/database/seeds/CategoryTableSeeder.php',
+        'Codebyray\\ReviewRateable\\Contracts\\ReviewRateable' => __DIR__ . '/..' . '/codebyray/laravel-review-rateable/src/Contracts/ReviewRateable.php',
+        'Codebyray\\ReviewRateable\\Models\\Rating' => __DIR__ . '/..' . '/codebyray/laravel-review-rateable/src/Models/Rating.php',
+        'Codebyray\\ReviewRateable\\ReviewRateableServiceProvider' => __DIR__ . '/..' . '/codebyray/laravel-review-rateable/src/ReviewRateableServiceProvider.php',
+        'Codebyray\\ReviewRateable\\Traits\\ReviewRateable' => __DIR__ . '/..' . '/codebyray/laravel-review-rateable/src/Traits/ReviewRateable.php',
         'Composer\\Autoload\\AutoloadGenerator' => __DIR__ . '/..' . '/composer/composer/src/Composer/Autoload/AutoloadGenerator.php',
         'Composer\\Autoload\\ClassLoader' => __DIR__ . '/..' . '/composer/composer/src/Composer/Autoload/ClassLoader.php',
         'Composer\\Autoload\\ClassMapGenerator' => __DIR__ . '/..' . '/composer/composer/src/Composer/Autoload/ClassMapGenerator.php',
@@ -3647,6 +3666,16 @@ class ComposerStaticInit14bb5a53c188dfb30b5878dc33ecfe26
         'Laravel\\Tinker\\Console\\TinkerCommand' => __DIR__ . '/..' . '/laravel/tinker/src/Console/TinkerCommand.php',
         'Laravel\\Tinker\\TinkerCaster' => __DIR__ . '/..' . '/laravel/tinker/src/TinkerCaster.php',
         'Laravel\\Tinker\\TinkerServiceProvider' => __DIR__ . '/..' . '/laravel/tinker/src/TinkerServiceProvider.php',
+        'Laravelista\\Comments\\Comment' => __DIR__ . '/..' . '/laravelista/comments/src/Comment.php',
+        'Laravelista\\Comments\\CommentController' => __DIR__ . '/..' . '/laravelista/comments/src/CommentController.php',
+        'Laravelista\\Comments\\CommentControllerInterface' => __DIR__ . '/..' . '/laravelista/comments/src/CommentControllerInterface.php',
+        'Laravelista\\Comments\\CommentPolicy' => __DIR__ . '/..' . '/laravelista/comments/src/CommentPolicy.php',
+        'Laravelista\\Comments\\Commentable' => __DIR__ . '/..' . '/laravelista/comments/src/Commentable.php',
+        'Laravelista\\Comments\\Commenter' => __DIR__ . '/..' . '/laravelista/comments/src/Commenter.php',
+        'Laravelista\\Comments\\Events\\CommentCreated' => __DIR__ . '/..' . '/laravelista/comments/src/Events/CommentCreated.php',
+        'Laravelista\\Comments\\Events\\CommentDeleted' => __DIR__ . '/..' . '/laravelista/comments/src/Events/CommentDeleted.php',
+        'Laravelista\\Comments\\Events\\CommentUpdated' => __DIR__ . '/..' . '/laravelista/comments/src/Events/CommentUpdated.php',
+        'Laravelista\\Comments\\ServiceProvider' => __DIR__ . '/..' . '/laravelista/comments/src/ServiceProvider.php',
         'League\\Flysystem\\AdapterInterface' => __DIR__ . '/..' . '/league/flysystem/src/AdapterInterface.php',
         'League\\Flysystem\\Adapter\\AbstractAdapter' => __DIR__ . '/..' . '/league/flysystem/src/Adapter/AbstractAdapter.php',
         'League\\Flysystem\\Adapter\\AbstractFtpAdapter' => __DIR__ . '/..' . '/league/flysystem/src/Adapter/AbstractFtpAdapter.php',
@@ -4965,6 +4994,13 @@ class ComposerStaticInit14bb5a53c188dfb30b5878dc33ecfe26
         'Seld\\PharUtils\\Timestamps' => __DIR__ . '/..' . '/seld/phar-utils/src/Timestamps.php',
         'SettingsTableSeeder' => __DIR__ . '/../..' . '/database/seeds/SettingsTableSeeder.php',
         'SettingsTableSeederCustom' => __DIR__ . '/../..' . '/database/seeds/SettingsTableSeederCustom.php',
+        'Spatie\\Honeypot\\EncryptedTime' => __DIR__ . '/..' . '/spatie/laravel-honeypot/src/EncryptedTime.php',
+        'Spatie\\Honeypot\\HoneypotServiceProvider' => __DIR__ . '/..' . '/spatie/laravel-honeypot/src/HoneypotServiceProvider.php',
+        'Spatie\\Honeypot\\HoneypotViewComposer' => __DIR__ . '/..' . '/spatie/laravel-honeypot/src/HoneypotViewComposer.php',
+        'Spatie\\Honeypot\\ProtectAgainstSpam' => __DIR__ . '/..' . '/spatie/laravel-honeypot/src/ProtectAgainstSpam.php',
+        'Spatie\\Honeypot\\SpamDetected' => __DIR__ . '/..' . '/spatie/laravel-honeypot/src/SpamDetected.php',
+        'Spatie\\Honeypot\\SpamResponder\\BlankPageResponder' => __DIR__ . '/..' . '/spatie/laravel-honeypot/src/SpamResponder/BlankPageResponder.php',
+        'Spatie\\Honeypot\\SpamResponder\\SpamResponder' => __DIR__ . '/..' . '/spatie/laravel-honeypot/src/SpamResponder/SpamResponder.php',
         'Symfony\\Component\\Console\\Application' => __DIR__ . '/..' . '/symfony/console/Application.php',
         'Symfony\\Component\\Console\\CommandLoader\\CommandLoaderInterface' => __DIR__ . '/..' . '/symfony/console/CommandLoader/CommandLoaderInterface.php',
         'Symfony\\Component\\Console\\CommandLoader\\ContainerCommandLoader' => __DIR__ . '/..' . '/symfony/console/CommandLoader/ContainerCommandLoader.php',

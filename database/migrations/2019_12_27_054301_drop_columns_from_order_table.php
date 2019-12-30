@@ -14,7 +14,10 @@ class DropColumnsFromOrderTable extends Migration
     public function up()
     {
         Schema::table('orders', function (Blueprint $table) {
-            $table->dropColumn(['billing_province','billing_postalcode']);
+            $table->dropColumn(['billing_province','billing_postalcode', 
+            'billing_name_on_card','billing_discount','billing_discount_code',
+            'billing_subtotal', 'billing_tax', 'payment_gateway']);
+           
         });
     }
 

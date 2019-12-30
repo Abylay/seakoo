@@ -150,6 +150,7 @@ return [
         /*
          * Package Service Providers...
          */
+        Codebyray\ReviewRateable\ReviewRateableServiceProvider::class,
 
         /*
          * Application Service Providers...
