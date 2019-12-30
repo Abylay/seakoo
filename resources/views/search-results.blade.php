@@ -9,9 +9,9 @@
 @section('content')
 
     @component('components.breadcrumbs')
-        <a href="/">Главная страница</a>
+        <a href="/">Home</a>
         <i class="fa fa-chevron-right breadcrumb-separator"></i>
-        <span>Поиск</span>
+        <span>Search</span>
     @endcomponent
 
     <div class="container">
@@ -40,7 +40,7 @@
         <table class="table table-bordered table-striped">
             <thead>
                 <tr>
-                    <th>Имя</th>
+                    <th>Название</th>
                     <th>Детали</th>
                     <th>Описание</th>
                     <th>Цена</th>

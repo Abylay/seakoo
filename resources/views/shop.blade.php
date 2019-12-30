@@ -1,72 +1,18 @@
 @extends('layout')
 
-@section('title', 'Products')
+@section('title', 'Продукты')
 
 @section('extra-css')
     <link rel="stylesheet" href="{{ asset('css/algolia.css') }}">
-<style>
-   .filter {
-  padding: 15px;
-  background: white;
-  width: 200px;
-  box-shadow: 2px 2px 8px rgba(0,0,0,.1);
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-.filter h3 {
-  font-size: 16px;
-  color: rgba(0,0,0,.6);
-  margin: 0 0 10px;
-  padding: 0 5px;
-  position: relative;
-}
-.filter h3:after {
-  content: "";
-  width: 6px;
-  height: 6px;
-  background: #80C8A0;
-  position: absolute;
-  right: 5px;
-  bottom: 2px;
-  box-shadow: -8px -8px #80C8A0, 0 -8px #80C8A0, -8px 0 #80C8A0;
-}
-.filter ul {
-  list-style: none;
-  margin: 0;
-  padding: 0; 
-  border-top: 1px solid rgba(0,0,0,.3);
-}
-.filter li {margin: 12px 0 0 0px;}
-.filter a {
-  text-decoration: none;
-  display: block;  
-  font-size: 13px;
-  color: rgba(0,0,0,.6);
-  padding: 5px;
-  position: relative;
-  transition: .3s linear;
-}
-.filter a:after {
-  content:"\f18e";
-  font-family: FontAwesome;
-  position: absolute;
-  right: 5px;
-  color: white;
-  transition: .2s linear;
-}
-.filter a:hover {
-  background: #80C8A0;
-  color: white;
-}
-</style>
-
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 @endsection
 
 @section('content')
 
     @component('components.breadcrumbs')
-        <a href="/">Главная страница</a>
+        <a href="/">Главная</a>
         <i class="fa fa-chevron-right breadcrumb-separator"></i>
-        <span>Магазин</span>
+        <span><a href="/shop">Продукты</a></span>
     @endcomponent
 
     <div class="container">
@@ -89,7 +35,7 @@
 
     <div class="products-section container">
         <div class="sidebar">
-            <h3>Категории</h3>
+            <h3 class="categ">Категории</h3>
             <div class="filter" style="position: relative;">
                     <ul class="filter-list" >
                         @foreach($categories as $_category)
@@ -112,11 +58,11 @@
         </div> <!-- end sidebar -->
         <div>
             <div class="products-header">
-                <h1 class="stylish-heading">Популярные товары</h1>
+                <h1 class="stylish-heading"><a href="/shop">Популярные товары</h1>
                 <div>
-                    <strong>Цена: </strong>
-                    <a href="{{ route('shop.index', ['category'=> request()->category, 'sort' => 'low_high']) }}">Сначала дешевые</a> |
-                    <a href="{{ route('shop.index', ['category'=> request()->category, 'sort' => 'high_low']) }}">Сначала дорогие</a>
+                    <strong>Сортировка: </strong>
+                    <a href="{{ route('shop.index', ['category'=> request()->category, 'sort' => 'low_high']) }}">По возрастанию</a> |
+                    <a href="{{ route('shop.index', ['category'=> request()->category, 'sort' => 'high_low']) }}">По убыванию</a>
 
                 </div>
             </div>
@@ -124,12 +70,12 @@
             <div class="products text-center">
                 @forelse ($products as $product)
                     <div class="product">
-                        <a href="{{ route('shop.show', $product->slug) }}"><img src="{{ productImage($product->image) }}" alt="product"></a>
+                        <a href="{{ route('shop.show', $product->slug) }}"><img src="{{ productImage($product->image) }}" width="200" height="200" alt="product"></a>
                         <a href="{{ route('shop.show', $product->slug) }}"><div class="product-name">{{ $product->name }}</div></a>
                         <div class="product-price">{{ $product->presentPrice() }}</div>
                     </div>
-                @empty
-                    <div style="text-align: left">В базе не найдены товары</div>
+                @empty 
+                    <div style="text-align: left">Товары отсутсвуют</div>
                 @endforelse
             </div> <!-- end products -->
 

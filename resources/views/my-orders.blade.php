@@ -9,7 +9,7 @@
 @section('content')
 
     @component('components.breadcrumbs')
-        <a href="/">Гланвая страница</a>
+        <a href="/">Главная</a>
         <i class="fa fa-chevron-right breadcrumb-separator"></i>
         <span>Мои заказы</span>
     @endcomponent
@@ -36,13 +36,13 @@
         <div class="sidebar">
 
             <ul>
-              <li><a href="{{ route('users.edit') }}">Мой профиль</a></li>
-              <li class="active"><a href="{{ route('orders.index') }}">Мои заказы</a></li>
+              <li><a href="{{ route('users.edit') }}">My Profile</a></li>
+              <li class="active"><a href="{{ route('orders.index') }}">My Orders</a></li>
             </ul>
         </div> <!-- end sidebar -->
         <div class="my-profile">
             <div class="products-header">
-                <h1 class="stylish-heading">Мои заказы</h1>
+                <h1 class="stylish-heading">My Orders</h1>
             </div>
 
             <div>
@@ -51,14 +51,14 @@
                     <div class="order-header">
                         <div class="order-header-items">
                             <div>
-                                <div class="uppercase font-bold">заказ размещен</div>
+                                <div class="uppercase font-bold">Order Placed</div>
                                 <div>{{ presentDate($order->created_at) }}</div>
                             </div>
                             <div>
-                                <div class="uppercase font-bold">Номер заказа</div>
+                                <div class="uppercase font-bold">Order ID</div>
                                 <div>{{ $order->id }}</div>
                             </div><div>
-                                <div class="uppercase font-bold">Товар</div>
+                                <div class="uppercase font-bold">Total</div>
                                 <div>{{ presentPrice($order->billing_total) }}</div>
                             </div>
                         </div>
@@ -66,7 +66,7 @@
                             <div class="order-header-items">
                                 <div><a href="{{ route('orders.show', $order->id) }}">Order Details</a></div>
                                 <div>|</div>
-                                <div><a href="#">Счет</a></div>
+                                <div><a href="#">Invoice</a></div>
                             </div>
                         </div>
                     </div>

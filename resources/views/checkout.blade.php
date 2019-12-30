@@ -151,7 +151,7 @@
 
                 <div class="checkout-totals">
                     <div class="checkout-totals-left">
-                        К оплате <br>
+                        К оплате: <br>
                         <!--@if (session()->has('coupon'))
                             Discount ({{ session()->get('coupon')['name'] }}) :
                             <br>

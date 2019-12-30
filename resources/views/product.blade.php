@@ -9,9 +9,9 @@
 @section('content')
 
     @component('components.breadcrumbs')
-        <a href="/">Главная страница</a>
+        <a href="/">Главная</a>
         <i class="fa fa-chevron-right breadcrumb-separator"></i>
-        <span><a href="{{ route('shop.index') }}">Магазин</a></span>
+        <span><a href="{{ route('shop.index') }}">Продукты</a></span>
         <i class="fa fa-chevron-right breadcrumb-separator"></i>
         <span>{{ $product->name }}</span>
     @endcomponent
@@ -68,7 +68,7 @@
             @if ($product->quantity > 0)
                 <form action="{{ route('cart.store', $product) }}" method="POST">
                     {{ csrf_field() }}
-                    <button type="submit" class="button button-plain">Add to Cart</button>
+                    <button type="submit" class="button button-plain">Добавить в корзину</button>
                 </form>
             @endif
         </div>

@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', 'My Profile')
+@section('title', 'Мой профиль')
 
 @section('extra-css')
     <link rel="stylesheet" href="{{ asset('css/algolia.css') }}">
@@ -9,9 +9,9 @@
 @section('content')
 
     @component('components.breadcrumbs')
-        <a href="/">Home</a>
+        <a href="/">Главная</a>
         <i class="fa fa-chevron-right breadcrumb-separator"></i>
-        <span>My Profile</span>
+        <span>Мой профиль</span>
     @endcomponent
 
     <div class="container">
@@ -50,20 +50,20 @@
                     @method('patch')
                     @csrf
                     <div class="form-control">
-                        <input id="name" type="text" name="name" value="{{ old('name', $user->name) }}" placeholder="Name" required>
+                        <input id="name" type="text" name="name" value="{{ old('name', $user->name) }}" placeholder="ФИО" required>
                     </div>
                     <div class="form-control">
                         <input id="email" type="email" name="email" value="{{ old('email', $user->email) }}" placeholder="Email" required>
                     </div>
                     <div class="form-control">
-                        <input id="password" type="password" name="password" placeholder="Password">
-                        <div>Оставьте пароль пустым, чтобы сохранить текущий пароль!</div>
+                        <input id="password" type="password" name="password" placeholder="Пароль">
+                        <div>Оставьте поле пустым если вы не собираетесь менять пароль</div>
                     </div>
                     <div class="form-control">
-                        <input id="password-confirm" type="password" name="password_confirmation" placeholder="Confirm Password">
+                        <input id="password-confirm" type="password" name="password_confirmation" placeholder="Подтвердите пароль">
                     </div>
                     <div>
-                        <button type="submit" class="my-profile-button">Update Profile</button>
+                        <button type="submit" class="my-profile-button">Обновить профиль</button>
                     </div>
                 </form>
             </div>

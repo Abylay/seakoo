@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', 'Sign Up for an Account')
+@section('title', 'Регистрация')
 
 @section('content')
 <div class="container">
@@ -35,10 +35,10 @@
                     required>
 
                 <div class="login-container">
-                    <button type="submit" class="auth-button">Create Account</button>
+                    <button type="submit" class="auth-button">Зарегистрироватся</button>
                     <div class="already-have-container">
-                        <p><strong>Already have an account?</strong></p>
-                        <a href="{{ route('login') }}">Login</a>
+                        <p><strong>Уже есть аккаунт?</strong></p>
+                        <a href="{{ route('login') }}">Войти</a>
                     </div>
                 </div>
 
@@ -46,15 +46,14 @@
         </div>
 
         <div class="auth-right">
-            <h2>New Customer</h2>
+            <h2>Новый покупатель</h2>
             <div class="spacer"></div>
-            <p><strong>Save time now.</strong></p>
-            <p>Creating an account will allow you to checkout faster in the future, have easy access to order history and customize your experience to suit your preferences.</p>
-
+<!--
             &nbsp;
             <div class="spacer"></div>
             <p><strong>Loyalty Program</strong></p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis, amet magnam accusamus nisi distinctio eveniet ullam. Facere, cumque architecto.</p>
+-->
         </div>
     </div> <!-- end auth-pages -->
 </div>

@@ -38,7 +38,7 @@ class CheckoutRequest extends FormRequest
     public function messages()
     {
         return [
-            'email.unique' => 'You already have an account with this email address. Please <a href="/login">login</a> to continue.',
+            'email.unique' => 'У вас уже есть аккаунт с этим электронным адресом. Пожалуйста <a href="/login">войдите</a> чтобы продолжить.',
         ];
     }
 }

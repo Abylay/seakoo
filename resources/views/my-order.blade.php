@@ -9,9 +9,9 @@
 @section('content')
 
     @component('components.breadcrumbs')
-        <a href="/">Главная страница</a>
+        <a href="/">Home</a>
         <i class="fa fa-chevron-right breadcrumb-separator"></i>
-        <span>Мои заказы</span>
+        <span>My Order</span>
     @endcomponent
 
     <div class="container">
@@ -36,8 +36,8 @@
         <div class="sidebar">
 
             <ul>
-              <li><a href="{{ route('users.edit') }}">Мой профиль</a></li>
-              <li class="active"><a href="{{ route('orders.index') }}">Мои заказы</a></li>
+              <li><a href="{{ route('users.edit') }}">My Profile</a></li>
+              <li class="active"><a href="{{ route('orders.index') }}">My Orders</a></li>
             </ul>
         </div> <!-- end sidebar -->
         <div class="my-profile">
@@ -50,20 +50,20 @@
                     <div class="order-header">
                         <div class="order-header-items">
                             <div>
-                                <div class="uppercase font-bold">Заказ размещен</div>
+                                <div class="uppercase font-bold">Order Placed</div>
                                 <div>{{ presentDate($order->created_at) }}</div>
                             </div>
                             <div>
-                                <div class="uppercase font-bold">Номер заказа</div>
+                                <div class="uppercase font-bold">Order ID</div>
                                 <div>{{ $order->id }}</div>
                             </div><div>
-                                <div class="uppercase font-bold">Товар</div>
+                                <div class="uppercase font-bold">Total</div>
                                 <div>{{ presentPrice($order->billing_total) }}</div>
                             </div>
                         </div>
                         <div>
                             <div class="order-header-items">
-                                <div><a href="#">Счет</a></div>
+                                <div><a href="#">Invoice</a></div>
                             </div>
                         </div>
                     </div>
@@ -71,15 +71,15 @@
                         <table class="table" style="width:50%">
                             <tbody>
                                 <tr>
-                                    <td>Имя</td>
+                                    <td>Name</td>
                                     <td>{{ $order->user->name }}</td>
                                 </tr>
                                 <tr>
-                                    <td>Адрес</td>
+                                    <td>Address</td>
                                     <td>{{ $order->billing_address }}</td>
                                 </tr>
                                 <tr>
-                                    <td>Город</td>
+                                    <td>City</td>
                                     <td>{{ $order->billing_city }}</td>
                                 </tr>
                                 <tr>
@@ -91,7 +91,7 @@
                                     <td>{{ presentPrice($order->billing_tax) }}</td>
                                 </tr>
                                 <tr>
-                                    <td>Товар</td>
+                                    <td>Total</td>
                                     <td>{{ presentPrice($order->billing_total) }}</td>
                                 </tr>
                             </tbody>
@@ -104,7 +104,7 @@
                     <div class="order-header">
                         <div class="order-header-items">
                             <div>
-                                Детали заказа
+                                Order Items
                             </div>
 
                         </div>

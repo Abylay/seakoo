@@ -19,7 +19,7 @@
                 </ul>
             </div>
             @endif
-            <h2>Returning Customer</h2>
+            <h2>Уже есть аккаунт</h2>
             <div class="spacer"></div>
 
             <form action="{{ route('login') }}" method="POST">
@@ -29,35 +29,35 @@
                 <input type="password" id="password" name="password" value="{{ old('password') }}" placeholder="Password" required>
 
                 <div class="login-container">
-                    <button type="submit" class="auth-button">Login</button>
+                    <button type="submit" class="auth-button">Войти</button>
                     <label>
-                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
+                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Запомнить меня
                     </label>
                 </div>
 
                 <div class="spacer"></div>
 
                 <a href="{{ route('password.request') }}">
-                    Forgot Your Password?
+                    Забыли пароль?
                 </a>
 
             </form>
         </div>
 
         <div class="auth-right">
-            <h2>New Customer</h2>
+            <h2>Новый покупатель</h2>
             <div class="spacer"></div>
-            <p><strong>Save time now.</strong></p>
-            <p>You don't need an account to checkout.</p>
+            <p><strong>Сохраните свое время</strong></p>
+            <p>Вам не нужен аккаунт чтобы оформить заказ.</p>
             <div class="spacer"></div>
-            <a href="{{ route('guestCheckout.index') }}" class="auth-button-hollow">Continue as Guest</a>
+            <a href="{{ route('guestCheckout.index') }}" class="auth-button-hollow">Продолжить как гость</a>
             <div class="spacer"></div>
             &nbsp;
             <div class="spacer"></div>
-            <p><strong>Save time later.</strong></p>
-            <p>Create an account for fast checkout and easy access to order history.</p>
+            <p><strong>Сохраните свое время</strong></p>
+            <p>Создайте аккаунт для просмотра истории заказов</p>
             <div class="spacer"></div>
-            <a href="{{ route('register') }}" class="auth-button-hollow">Create Account</a>
+            <a href="{{ route('register') }}" class="auth-button-hollow">Создать аккаунт</a>
 
         </div>
     </div>

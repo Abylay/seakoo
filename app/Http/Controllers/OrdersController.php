@@ -51,7 +51,7 @@ class OrdersController extends Controller
     public function show(Order $order)
     {
         if (auth()->id() !== $order->user_id) {
-            return back()->withErrors('You do not have access to this!');
+            return back()->withErrors('У вас нет доступа');
         }
 
         $products = $order->products;

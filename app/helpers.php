@@ -4,7 +4,7 @@ use Carbon\Carbon;
 
 function presentPrice($price)
 {
-    return money_format('$%i', $price / 100);
+    return money_format('₸ %i', $price * 1000);
 }
 
 function presentDate($date)
@@ -47,11 +47,11 @@ function getNumbers()
 function getStockLevel($quantity)
 {
     if ($quantity > setting('site.stock_threshold', 5)) {
-        $stockLevel = '<div class="badge badge-success">In Stock</div>';
+        $stockLevel = '<div class="badge badge-success">В наличии</div>';
     } elseif ($quantity <= setting('site.stock_threshold', 5) && $quantity > 0) {
-        $stockLevel = '<div class="badge badge-warning">Low Stock</div>';
+        $stockLevel = '<div class="badge badge-warning">Мало в наличии</div>';
     } else {
-        $stockLevel = '<div class="badge badge-danger">Not available</div>';
+        $stockLevel = '<div class="badge badge-danger">Нет в наличии</div>';
     }
 
     return $stockLevel;
